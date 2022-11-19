@@ -1,6 +1,7 @@
-## try, except, finally...
+## try, except, finally, raise...
 
-print("Calculadora de divisiones")
+##Ejemplo 1
+""" print("Calculadora de divisiones")
 
 while True:
     try:
@@ -16,8 +17,8 @@ def divide_uno(num1, num2):
     except ZeroDivisionError:
         print("No se puede dividir entre 0")
         return "Operación errónea"
-##print(divide_uno(op1,op2))
-##print("Programa terminado")
+print(divide_uno(op1,op2))
+print("Programa terminado")
 
 def divide_dos():
     try:
@@ -29,4 +30,22 @@ def divide_dos():
     finally:
         print("Calculo finalizado")
 
-divide_dos()
+divide_dos() """
+
+##Ejemplo 2
+
+import math
+
+def calculo_raiz(num):
+    if num < 0:
+        raise ValueError("El número no puede ser negativo")
+    else:
+        return math.sqrt(num)
+
+opt1=(int(input("Introduce un número: ")))
+try:
+    print(calculo_raiz(opt1))
+except ValueError as ErrorDeNumeroNegativo:
+    print(ErrorDeNumeroNegativo)
+
+print("Programa terminado")
