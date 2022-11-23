@@ -8,6 +8,7 @@ class Coche():
         ## Encapsulado de variable
         self.__ruedas=4
         self.enMarcha=False
+
     ##Metodos
     def Arrancar(self, arrancamos):
         self.enMarcha=arrancamos
@@ -42,3 +43,4 @@ print("------------- A continuacion creamos el segundo objeto-------------------
 miCoche=Coche()
 print(miCoche.Arrancar(False))
 miCoche.Estado()
+
